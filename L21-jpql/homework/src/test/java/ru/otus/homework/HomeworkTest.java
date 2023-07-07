@@ -22,10 +22,7 @@ import org.junit.jupiter.api.Test;
 import ru.otus.crm.model.Address;
 import ru.otus.crm.model.Client;
 import ru.otus.crm.model.Phone;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatCode;
-
+@SuppressWarnings("unchecked")
 class HomeworkTest {
 
     private StandardServiceRegistry serviceRegistry;

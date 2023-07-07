@@ -1,9 +1,5 @@
 package ru.otus.references;
 
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.lang.ref.PhantomReference;
 import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;
@@ -12,6 +8,8 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * VM options: -Xmx256m -Xms256m -Xlog:gc=debug
@@ -173,12 +171,12 @@ public class ReferenceDemo {
             this.doRevival = doRevival;
         }
 
-        @Override
-        protected void finalize() {
-            logger.info("finalize it");
-            if (doRevival) {
-                revivalBackup = this;
-            }
-        }
+//        @Override
+//        protected void finalize() {
+//            logger.info("finalize it");
+//            if (doRevival) {
+//                revivalBackup = this;
+//            }
+//        }
     }
 }
